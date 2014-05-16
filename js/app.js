@@ -13,7 +13,6 @@ $(document).ready(function(){
 
   	/*--- My code ---*/
 
-    secretNum(magic); 
 
     $("#guessButton").on("click",function(){
       guessing();
@@ -22,14 +21,19 @@ $(document).ready(function(){
 
     $(".new").on("click",function(){
       newGame();
+      var secretNum = function(random){
+      }
+      var magic = Math.floor((Math.random()*100) + 1); 
+      secretNum(magic);
+      alert(magic); 
     });
-});
+  });
 
 var secretNum = function(random){
-      alert(random);
-      return random;     
   }
-var magic = (Math.floor((Math.random()*100) + 1)); 
+var magic = Math.floor((Math.random()*100) + 1); 
+secretNum(magic);
+alert(magic); 
 
 var guessing = function(){    
     var guess = $("#userGuess ").val();
@@ -71,7 +75,6 @@ var guessing = function(){
      }
 
 var newGame = function(){
-      secretNum(magic);
       $("#feedback").text("Make your Guess!");
       $("#userGuess").prop("disabled",false);
       $("#guessList").text("");
