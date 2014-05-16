@@ -71,6 +71,7 @@ var guessing = function(){
      }
 
 var newGame = function(){
+      secretNum(magic);
       $("#feedback").text("Make your Guess!");
       $("#userGuess").prop("disabled",false);
       $("#guessList").text("");
